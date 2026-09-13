@@ -165,7 +165,7 @@ navLinks.forEach(link => {
     IMAGE FOLLOW MOUSE
     =========================*/
     
-    const imageBox = document.querySelector(".image-box");
+    const imageBox = document.querySelector(".home-image .image-box");
     
     document.addEventListener("mousemove",(e)=>{
         
@@ -181,38 +181,37 @@ navLinks.forEach(link => {
     
     });
 
-
 /*=========================
-SEND EMAIL
+CONTACT FORM
 =========================*/
 
-function sendMail(){
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+if (contactForm) {
 
-    if(name==="" || email==="" || message===""){
+    contactForm.addEventListener("submit", function(event) {
 
-        alert("Silakan lengkapi semua data terlebih dahulu.");
+        event.preventDefault();
 
-        return;
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-    }
+        if (name === "" || email === "" || message === "") {
+            return;
+        }
 
-    const subject = encodeURIComponent("Pesan dari Portfolio Website");
+        formStatus.textContent = "✓ Pesan berhasil dikirim!";
+        formStatus.classList.add("show");
 
-    const body = encodeURIComponent(
-`Nama : ${name}
+        contactForm.reset();
 
-Email : ${email}
+        setTimeout(function() {
+            formStatus.classList.remove("show");
+        }, 4000);
 
-Pesan :
-
-${message}`
-    );
-
-    window.location.href=`mailto:anisauljanahjanah@gmail.com?subject=${subject}&body=${body}`;
+    });
 
 }
 
@@ -228,30 +227,56 @@ ABOUT TYPING PARAGRAPH
 ABOUT TYPING PARAGRAPH
 =========================*/
 
+/*=========================
+ABOUT TEXT
+=========================*/
+
 const aboutTyping = document.getElementById("about-typing");
 
-const aboutText = `Saya adalah siswi SMK Negeri 1 Rembang jurusan Rekayasa Perangkat Lunak yang memiliki minat di bidang Front-End Development dan UI/UX Design.
+if (aboutTyping) {
+    aboutTyping.innerHTML = `
+        Saya adalah siswi SMK Negeri 1 Rembang jurusan Rekayasa Perangkat Lunak yang memiliki minat di bidang Front-End Development dan UI/UX Design.
 
-Saya senang membuat website yang modern, responsif, dan mudah digunakan. Selain itu, saya juga memiliki pengalaman menggunakan Figma untuk mendesain antarmuka website, Canva untuk membuat desain visual, serta CapCut untuk mengedit video dan konten.
+        Saya senang membuat website yang modern, responsif, dan mudah digunakan. Selain itu, saya juga memiliki pengalaman menggunakan Figma untuk mendesain antarmuka website, Canva untuk membuat desain visual, serta CapCut untuk mengedit video dan konten.
 
-Saat ini saya terus belajar, mengembangkan kemampuan, dan membangun berbagai project agar menjadi Front-End Developer yang profesional.`;
-
-let i = 0;
-
-function typingAbout(){
-
-    if(!aboutTyping) return;
-
-    if(i < aboutText.length){
-
-        aboutTyping.innerHTML += aboutText.charAt(i);
-
-        i++;
-
-        setTimeout(typingAbout,20);
-
-    }
-
+        Saat ini saya terus belajar, mengembangkan kemampuan, dan membangun berbagai project agar menjadi Front-End Developer yang profesional.
+    `;
 }
 
-typingAbout();
+
+/* ==============================
+   SMOOTH SCROLL REVEAL
+   Animasi hanya berjalan 1 kali
+   ============================== */
+
+const scrollElements = document.querySelectorAll(
+    ".scroll-reveal, .scroll-image, .scroll-title, .scroll-card"
+);
+
+const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                // Jalankan animasi
+                entry.target.classList.add("show");
+
+                // Berhenti mengamati elemen
+                // agar animasi tidak berjalan lagi
+                observer.unobserve(entry.target);
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.15,
+        rootMargin: "0px 0px -80px 0px"
+    }
+);
+
+scrollElements.forEach((element) => {
+    revealObserver.observe(element);
+});
