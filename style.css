@@ -280,28 +280,39 @@ HOME
 
 .home-content h1{
 
-    font-size:72px;
-    font-weight:800;
-    line-height:1.1;
-    margin-bottom:15px;
+    font-size:48px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin-bottom:8px;
 
 }
 
 .home-content h3{
 
-    font-size:32px;
-    font-weight:600;
+    font-size:20px;
+
+    font-weight:500;
+
     color:#d6e2ff;
-    margin-bottom:25px;
+
+    margin-bottom:15px;
 
 }
 
 .description{
 
-    max-width:620px;
-    font-size:18px;
-    line-height:2;
+    max-width:580px;
+
+    font-size:15px;
+
+    line-height:1.8;
+
     color:#d4dcf5;
+
+    margin-bottom:0;
 
 }
 
@@ -628,21 +639,19 @@ ABOUT
 }
 
 #about-typing{
-
-    color:#6ea8ff;
-    font-size:24px;
-    margin-bottom:25px;
-    height:35px;
-
+    color:#d2d8ea;
+    font-size:15px;
+    line-height:1.8;
+    text-align:left;
+    margin-bottom:15px;
+    min-height:auto;
 }
 
 .about-content p{
-
     color:#d2d8ea;
-    line-height:2;
-    margin-bottom:20px;
-    font-size:17px;
-
+    line-height:1.8;
+    margin-bottom:15px;
+    font-size:15px;
 }
 
 .about-content strong{
@@ -651,13 +660,6 @@ ABOUT
 
 }
 
-.about-title{
-    font-size:55px;
-    color:#6ea8ff;
-    margin-bottom:30px;
-    font-weight:700;
-    letter-spacing:2px;
-}
 
 #about-typing{
     color:#d2d8ea;
@@ -1535,27 +1537,25 @@ RESPONSIVE
 
     .home-content h1{
 
-    font-size:80px;
+    font-size:56px;
 
-    font-weight:800;
+    font-weight:700;
 
-    line-height:1;
+    line-height:1.2;
 
-    color:#ffffff;
-
-    margin:15px 0;
-
-    text-shadow:0 0 25px rgba(79,124,255,.3);
+    margin-bottom:10px;
 
 }
 
     .home-content h3{
 
-    font-size:34px;
+    font-size:23px;
 
-    color:#7ab6ff;
+    font-weight:500;
 
-    margin-bottom:25px;
+    color:#d6e2ff;
+
+    margin-bottom:18px;
 
 }
 }
@@ -1751,4 +1751,148 @@ body {
 
 #form-status.show {
     opacity: 1;
+}
+
+/* =========================================
+   HOME - UKURAN TEKS LEBIH PROPORSIONAL
+   ========================================= */
+
+.home-content h1{
+    font-size:64px;
+    font-weight:700;
+    line-height:1.15;
+    margin:10px 0;
+}
+
+.home-content h3{
+    font-size:21px;
+    margin-bottom:18px;
+}
+
+.description{
+    max-width:600px;
+    font-size:17px;
+    line-height:1.8;
+}
+
+/* =========================================
+   HOME - UKURAN TEKS SEIMBANG
+   ========================================= */
+
+.home-content h1{
+    font-size:64px;
+    font-weight:700;
+    line-height:1.15;
+    margin:10px 0;
+}
+
+.home-content h3{
+    font-size:21px;
+    font-weight:500;
+    line-height:1.5;
+    margin-bottom:18px;
+}
+
+.description{
+    max-width:600px;
+    font-size:17px;
+    line-height:1.8;
+    color:#d4dcf5;
+}
+
+/* =========================================
+   ABOUT - FOTO DISAMAKAN DENGAN HOME
+   ========================================= */
+
+.about-image .image-box{
+    width:420px;
+}
+
+/* ==============================
+   FINAL HOME TEXT
+   ============================== */
+
+.home-content h1{
+    font-size:64px;
+    font-weight:700;
+    line-height:1.15;
+    margin-top:28px;
+    margin-bottom:14px;
+    white-space:nowrap;
+}
+
+.home-content h3{
+    font-size:22px;
+    font-weight:500;
+    line-height:1.5;
+    margin-bottom:20px;
+}
+
+.description{
+    max-width:620px;
+    font-size:18px;
+    line-height:1.85;
+    color:#d4dcf5;
+    margin-bottom:0;
+}
+
+/* Jarak dari "Saya..." ke nama */
+.hello{
+    font-size:19px;
+    margin-bottom:24px;
+}
+
+
+@media(max-width:991px){
+
+    .home-content h1{
+        font-size:58px;
+        line-height:1.15;
+        margin-top:24px;
+        margin-bottom:14px;
+        white-space:normal;
+    }
+
+    .home-content h3{
+        font-size:21px;
+        margin-bottom:18px;
+    }
+
+    .description{
+        max-width:600px;
+        font-size:17px;
+        line-height:1.8;
+    }
+
+    .hello{
+        font-size:18px;
+        margin-bottom:22px;
+    }
+}
+
+
+@media(max-width:500px){
+
+    .home-content h1{
+        font-size:46px;
+        line-height:1.2;
+        margin-top:20px;
+        margin-bottom:12px;
+        white-space:normal;
+    }
+
+    .home-content h3{
+        font-size:19px;
+        margin-bottom:16px;
+    }
+
+    .description{
+        font-size:15.5px;
+        line-height:1.8;
+    }
+
+    .hello{
+        font-size:17px;
+        margin-bottom:20px;
+    }
 }
