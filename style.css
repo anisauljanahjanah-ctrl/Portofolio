@@ -582,91 +582,59 @@ ABOUT
 ==============================*/
 
 .about{
-
-    padding:120px 10%;
+    padding:80px 10%;
     background:#0f172a;
-
 }
 
 .about-container{
-
     display:grid;
     grid-template-columns:400px 1fr;
     gap:80px;
     align-items:center;
-
 }
 
 .about-image{
-
     display:flex;
     justify-content:center;
-
 }
 
 .about-image .image-box{
-
-    width:340px;
-
+    width:420px;
 }
 
 .about-content{
-
     color:white;
-
 }
 
 .about-subtitle{
-
     color:#5b8cff;
     letter-spacing:3px;
     font-weight:600;
     font-size:15px;
-
 }
-
-.about-content h2{
-
-    font-size:46px;
-    margin:18px 0;
-
-}
-
-.about-content h2 span{
-
-    color:#6ea8ff;
-
-}
-
-#about-typing{
-    color:#d2d8ea;
-    font-size:15px;
-    line-height:1.8;
-    text-align:left;
-    margin-bottom:15px;
-    min-height:auto;
-}
-
-.about-content p{
-    color:#d2d8ea;
-    line-height:1.8;
-    margin-bottom:15px;
-    font-size:15px;
-}
-
-.about-content strong{
-
-    color:#6ea8ff;
-
-}
-
 
 #about-typing{
     color:#d2d8ea;
     font-size:20px;
-    line-height:2;
-    text-align:justify;
-    min-height:250px;
+    line-height:1.8;
+    text-align:left;
+    letter-spacing:0;
+    word-spacing:0;
+    margin-bottom:15px;
+}
+
+#about-text{
+    color:#d2d8ea;
+    font-size:20px;
+    line-height:1.8;
+    text-align:left;
+    letter-spacing:0;
+    word-spacing:0;
+    margin-bottom:15px;
+}
+
+.about-content strong{
+    color:#6ea8ff;
 }
 
 /*==============================
