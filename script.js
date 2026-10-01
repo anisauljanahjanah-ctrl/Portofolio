@@ -234,13 +234,17 @@ ABOUT TEXT
 const aboutTyping = document.getElementById("about-typing");
 
 if (aboutTyping) {
+
     aboutTyping.innerHTML = `
-        Saya adalah siswi SMK Negeri 1 Rembang jurusan Rekayasa Perangkat Lunak yang memiliki minat di bidang Front-End Development dan UI/UX Design.
+
+        Saya adalah siswi SMK Negeri 1 Rembang jurusan Rekayasa Perangkat Lunak yang mengembangkan kemampuan di bidang Front-End Development dan UI/UX Design.
 
         Saya senang membuat website yang modern, responsif, dan mudah digunakan. Selain itu, saya juga memiliki pengalaman menggunakan Figma untuk mendesain antarmuka website, Canva untuk membuat desain visual, serta CapCut untuk mengedit video dan konten.
 
         Saat ini saya terus belajar, mengembangkan kemampuan, dan membangun berbagai project agar menjadi Front-End Developer yang profesional.
+
     `;
+
 }
 
 
